@@ -1,0 +1,24 @@
+<odoo>
+    <!-- View to configure the Asiacell payment gateway -->
+    <record id="view_payment_gateway_asiacell_form" model="ir.ui.view">
+        <field name="name">payment.gateway.asiacell.form</field>
+        <field name="model">payment.gateway.asiacell</field>
+        <field name="arch" type="xml">
+            <form string="Asiacell Payment Gateway">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="api_key"/>
+                        <field name="api_url"/>
+                    </group>
+                    <footer>
+                        <button string="Save" type="object" name="action_save" class="btn-primary"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Menu item to configure the gateway -->
+    <menuitem id="menu_payment_gateway_asiacell" name="Asiacell Payment Gateway" parent="account.menu_finance" action="action_payment_gateway_asiacell"/>
+</odoo>

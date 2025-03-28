@@ -1,0 +1,20 @@
+<odoo>
+    <template id="payment_asiacell" name="Asiacell Payment Gateway">
+        <t t-call="website.layout">
+            <div class="container">
+                <h2>دفع عبر Asiacell</h2>
+                <form method="post" action="/payment/asiacell">
+                    <div>
+                        <label for="amount">المبلغ:</label>
+                        <input type="text" id="amount" name="amount" required/>
+                    </div>
+                    <div>
+                        <label for="phone_number">رقم الهاتف:</label>
+                        <input type="text" id="phone_number" name="phone_number" required/>
+                    </div>
+                    <button type="submit" class="btn btn-primary">الدفع عبر Asiacell</button>
+                </form>
+            </div>
+        </t>
+    </template>
+</odoo>
