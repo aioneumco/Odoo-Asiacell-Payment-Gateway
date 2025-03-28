@@ -1,13 +1,57 @@
-Installation and Setup:
-Place the module in the Odoo addons folder.
+# AsiaCell Payment Gateway for Odoo
 
-Restart the Odoo server.
+### Overview
+This module integrates the **AsiaCell Payment Gateway** with **Odoo**, allowing you to process payments easily using AsiaCell's "Abayilham" service. This payment gateway allows users to pay amounts via their mobile phones using their balance with AsiaCell.
 
-Go to Apps and search for Asiacell Payment Gateway.
+### Features:
+- **Mobile Payment Support**: Customers can make payments using their mobile phones via their AsiaCell balance.
+- **Easy Customization**: You can easily customize settings like the API key and the gateway URL.
+- **Flexible User Experience**: Users can complete payments simply via an easy-to-use payment interface.
 
-Install the module.
+### Requirements:
+- You need to have **Odoo** installed.
+- You need to have your **API key** from AsiaCell.
+- You must have an **AsiaCell account** to obtain your API key.
 
-Configure the module by entering the API Key and API URL in the configuration form.
+### Installation:
+1. **Add the module file to the `addons` folder in Odoo.**
+2. Restart the Odoo server.
+3. Go to the **Apps** menu and search for **AsiaCell Payment Gateway**.
+4. Install the module.
+
+### Usage:
+- After installation, you can configure the gateway by going to **Accounting** > **Payment Settings**.
+- There are several configuration options:
+  - **API Key**: Enter your API key obtained from AsiaCell.
+  - **API URL**: Enter the URL of the API endpoint.
+
+### Configuration:
+Once installed, you can customize the settings through the Odoo system settings:
+1. **API Key**: Enter the API key provided by AsiaCell.
+2. **API URL**: Enter the API URL endpoint to interact with the payment gateway.
+
+### How Payments Work with AsiaCell:
+- Once configured, you can start accepting payments via the AsiaCell gateway.
+- When a customer selects **Pay with AsiaCell**, they will be directed to an interface where they can input the amount and their mobile phone number.
+- Once confirmed, the payment will be processed through the AsiaCell API to verify the transaction.
+
+### Key Files:
+1. **`models/payment_gateway.py`**: Contains the logic for integrating the payment gateway.
+2. **`views/payment_gateway_views.xml`**: Contains the user interface for configuring the payment gateway.
+3. **`controllers/main.py`**: Handles transactions and communicates with the API.
+4. **`templates/payment_gateway_templates.xml`**: Contains HTML templates to display the payment form.
+
+### Contribution:
+If you wish to contribute to the development of this module or have any suggestions, feel free to open a **pull request** or submit an **issue** via GitHub.
+
+### License:
+This project is licensed under the **GPL-2 License**.
+
+---
+
+### Notes:
+- If you face any issues while using this module, you can open an **issue** on the GitHub repository and we will assist you in resolving it.
+
 
 
 
